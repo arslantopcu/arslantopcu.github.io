@@ -1,0 +1,57 @@
+[
+{
+	"uri": "https://arslantopcu.github.io/code-review/",
+	"title": "Development &amp; Review",
+	"tags": [],
+	"description": "Code development follow",
+	"content": "New development and code review follow.\n Selected Issue Pull last development code  git pull origin development  Create branch with topic number  Format: sprint-no/type/issue-number Type: Feature, bugfix, hot-fix, poc Example: sprint-1/bugfix/task-1  Development task Testing from local development environment Merge from development Push remote branch  git push origin sprint-1/bugfix/task-1  Open code review request  Development vs sprint-1/bugfix/task-1   "
+},
+{
+	"uri": "https://arslantopcu.github.io/code-review/git-flow/",
+	"title": "Git branch naming conventions",
+	"tags": [],
+	"description": "",
+	"content": " Format  sprint-no/type/issue-number  master hotfix release develop  feature bugfix poc   git branch sprint-1/feature/task-1\n "
+},
+{
+	"uri": "https://arslantopcu.github.io/test/",
+	"title": "Build and Test",
+	"tags": [],
+	"description": "",
+	"content": " Build, release, run  A codebase is transformed into a (non-development) deploy through three stages:  The build stage is a transform which converts a code repo into an executable bundle known as a build. Using a version of the code at a commit specified by the deployment process, the build stage fetches vendors dependencies and compiles binaries and assets. The release stage takes the build produced by the build stage and combines it with the deploy’s current config. The resulting release contains both the build and the config and is ready for immediate execution in the execution environment. The run stage (also known as “runtime”) runs the app in the execution environment, by launching some set of the app’s processes against a selected release.   Every release should always have a unique release ID, such as a timestamp of the release (such as 2011-04-06-20:32:17) or an incrementing number (such as v100). Releases are an append-only ledger and a release cannot be mutated once it is created. Any change must create a new release.\nBuilds are initiated by the app’s developers whenever new code is deployed. Runtime execution, by contrast, can happen automatically in cases such as a server reboot, or a crashed process being restarted by the process manager. Therefore, the run stage should be kept to as few moving parts as possible, since problems that prevent an app from running can cause it to break in the middle of the night when no developers are on hand. The build stage can be more complex, since errors are always in the foreground for a developer who is driving the deploy.\n"
+},
+{
+	"uri": "https://arslantopcu.github.io/continuous-delivery/",
+	"title": "Continuous Delivery",
+	"tags": [],
+	"description": "",
+	"content": "A good deployment pipeline has numerous feedback loops along the way. At each stage of the pipeline, verifications are run. If they pass, the pipeline continues. If they fail, the pipeline halts and the team responds appropriately to the feedback. The feedback along the way prevents CD from being chaos. Poor quality will almost never reach production in a well-designed pipeline.\nMost of the feedback loops you find in a deployment pipeline are good practices in and of themselves. You might already be doing some or most of them. We think you should have many of these in place before moving forward with CD.\nFull Article\n"
+},
+{
+	"uri": "https://arslantopcu.github.io/devops/",
+	"title": "Devops",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://arslantopcu.github.io/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://arslantopcu.github.io/",
+	"title": "Home Page",
+	"tags": [],
+	"description": "",
+	"content": " Development Manifesto In the modern era, software is commonly delivered as a service: called web apps, or software-as-a-service. The twelve-factor app is a methodology for building software-as-a-service apps that:\n Use declarative formats for setup automation, to minimize time and cost for new developers joining the project; Have a clean contract with the underlying operating system, offering maximum portability between execution environments; Are suitable for deployment on modern cloud platforms, obviating the need for servers and systems administration; Minimize divergence between development and production, enabling continuous deployment for maximum agility; And can scale up without significant changes to tooling, architecture, or development practices.  The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).\nRead more\nApplication Review Check List  All application cloud based improvement (dockerize apps) Development apps full documentation Coding standart  "
+},
+{
+	"uri": "https://arslantopcu.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
