@@ -4,7 +4,7 @@
 	"title": "Development &amp; Review",
 	"tags": [],
 	"description": "Code development follow",
-	"content": "New development and code review follow.\n Selected Issue Pull last development code  git pull origin development  Create branch with topic number  Format: sprint-no/type/issue-number Type: Feature, bugfix, hot-fix, poc Example: sprint-1/bugfix/task-1  Development task Testing from local development environment Merge from development Push remote branch  git push origin sprint-1/bugfix/task-1  Open code review request  Development vs sprint-1/bugfix/task-1   "
+	"content": "New development and code review follow.\n Selected Issue Pull last development code  git pull origin development  Create branch with topic number  Format: sprint-no/type/issue-number Type: Feature, bugfix, hot-fix, poc Example: sprint-1/bugfix/task-1  Development task Testing from local development environment Merge from development Push remote branch  git push origin sprint-1/bugfix/task-1  Request reviews and wait for approvals.  Development vs sprint-1/bugfix/task-1   "
 },
 {
 	"uri": "https://arslantopcu.github.io/code-review/git-flow/",
