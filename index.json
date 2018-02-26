@@ -21,11 +21,25 @@
 	"content": " Build, release, run  A codebase is transformed into a (non-development) deploy through three stages:  The build stage is a transform which converts a code repo into an executable bundle known as a build. Using a version of the code at a commit specified by the deployment process, the build stage fetches vendors dependencies and compiles binaries and assets. The release stage takes the build produced by the build stage and combines it with the deploy’s current config. The resulting release contains both the build and the config and is ready for immediate execution in the execution environment. The run stage (also known as “runtime”) runs the app in the execution environment, by launching some set of the app’s processes against a selected release.   Every release should always have a unique release ID, such as a timestamp of the release (such as 2011-04-06-20:32:17) or an incrementing number (such as v100). Releases are an append-only ledger and a release cannot be mutated once it is created. Any change must create a new release.\nBuilds are initiated by the app’s developers whenever new code is deployed. Runtime execution, by contrast, can happen automatically in cases such as a server reboot, or a crashed process being restarted by the process manager. Therefore, the run stage should be kept to as few moving parts as possible, since problems that prevent an app from running can cause it to break in the middle of the night when no developers are on hand. The build stage can be more complex, since errors are always in the foreground for a developer who is driving the deploy.\n"
 },
 {
+	"uri": "https://arslantopcu.github.io/code-review/develop/",
+	"title": "Development",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://arslantopcu.github.io/continuous-delivery/",
 	"title": "Continuous Delivery",
 	"tags": [],
 	"description": "",
 	"content": "A good deployment pipeline has numerous feedback loops along the way. At each stage of the pipeline, verifications are run. If they pass, the pipeline continues. If they fail, the pipeline halts and the team responds appropriately to the feedback. The feedback along the way prevents CD from being chaos. Poor quality will almost never reach production in a well-designed pipeline.\nMost of the feedback loops you find in a deployment pipeline are good practices in and of themselves. You might already be doing some or most of them. We think you should have many of these in place before moving forward with CD.\nFull Article\n"
+},
+{
+	"uri": "https://arslantopcu.github.io/code-review/review/",
+	"title": "Review",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://arslantopcu.github.io/devops/",
