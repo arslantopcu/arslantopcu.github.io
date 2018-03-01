@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Development :: Continuous Delivery &amp; Development Standart Documentation</title>
+    <title>Dependencies :: Continuous Delivery &amp; Development Standart Documentation</title>
     
     
     <link href="/css/nucleus.css?1519925378" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/code-review/develop/">
+  <body class="" data-url="/standart/dependencies/">
     <nav id="sidebar" class="">
 
 
@@ -108,7 +108,7 @@
   
     
     <li data-nav-id="/standart/" title="Development Standarts" class="dd-item 
-        
+        parent
         
         
         ">
@@ -151,7 +151,7 @@
  
   
     
-      <li data-nav-id="/standart/dependencies/" title="Dependencies" class="dd-item ">
+      <li data-nav-id="/standart/dependencies/" title="Dependencies" class="dd-item active">
         <a href="/standart/dependencies/">
         <b>b. </b>Dependencies
         
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/code-review/" title="Development &amp; Review" class="dd-item 
-        parent
+        
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/code-review/develop/" title="Development" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/code-review/develop/">
@@ -591,7 +591,7 @@
             
           
           
-            <a href='/'>Home Page</a> > <a href='/code-review/'>Development & Review</a> > Development
+            <a href='/'>Home Page</a> > <a href='/standart/'>Development Standarts</a> > Dependencies
           
          
           
@@ -615,18 +615,29 @@
         
         <div id="body-inner">
           
-            <h1>Development</h1>
+            <h1>Dependencies</h1>
           
 
         
 
 
-<p><img src="/images/24ways-git-peerreview.png" alt="agence" /></p>
+<ul>
+<li><p>All the environments your code runs in need to have some dependencies, like a database, or an image processing library, or a command-line tool. Never let your application assume those things will be in place on a given machine. Ensure it by baking those dependencies into your software system.</p></li>
+
+<li><p>Most languages and frameworks provide a natural way to do this. You list all the versions of all the libraries you expect to have in place, and when the code is deployed, a command is run to download all the right versions and put them in place. No guesswork, everything as it needs to be</p></li>
+
+<li><p>A twelve-factor app never relies on implicit existence of system-wide packages. It declares all dependencies, completely and exactly, via a dependency declaration manifest. Furthermore, it uses a dependency isolation tool during execution to ensure that no implicit dependencies “leak in” from the surrounding system. The full and explicit dependency specification is applied uniformly to both production and development.</p></li>
+
+<li><p>For example, Bundler for Java-Maven, Python-pip , Linux-Makefile</p></li>
+</ul>
+
+<p><em>Importance: High</em></p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -659,8 +670,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -674,6 +683,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -691,21 +703,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -722,6 +719,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -862,68 +862,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -938,6 +880,21 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -989,15 +946,66 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
         
         
 
 
         
-            <a class="nav nav-prev" href="/code-review/git-flow/" title="Git branch naming conventions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/standart/page-codebase/" title="Codebase"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/code-review/review/" title="Review" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/standart/config/" title="Config" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1027,3 +1035,4 @@
 
   </body>
 </html>
+

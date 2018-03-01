@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Development :: Continuous Delivery &amp; Development Standart Documentation</title>
+    <title>Build, release, run :: Continuous Delivery &amp; Development Standart Documentation</title>
     
     
     <link href="/css/nucleus.css?1519925378" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/code-review/develop/">
+  <body class="" data-url="/standart/buid-release-run/">
     <nav id="sidebar" class="">
 
 
@@ -108,7 +108,7 @@
   
     
     <li data-nav-id="/standart/" title="Development Standarts" class="dd-item 
-        
+        parent
         
         
         ">
@@ -208,7 +208,7 @@
  
   
     
-      <li data-nav-id="/standart/buid-release-run/" title="Build, release, run" class="dd-item ">
+      <li data-nav-id="/standart/buid-release-run/" title="Build, release, run" class="dd-item active">
         <a href="/standart/buid-release-run/">
         <b>e. </b>Build, release, run
         
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/code-review/" title="Development &amp; Review" class="dd-item 
-        parent
+        
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/code-review/develop/" title="Development" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/code-review/develop/">
@@ -591,7 +591,7 @@
             
           
           
-            <a href='/'>Home Page</a> > <a href='/code-review/'>Development & Review</a> > Development
+            <a href='/'>Home Page</a> > <a href='/standart/'>Development Standarts</a> > Build, release, run
           
          
           
@@ -615,18 +615,39 @@
         
         <div id="body-inner">
           
-            <h1>Development</h1>
+            <h1>Build, release, run</h1>
           
 
         
 
 
-<p><img src="/images/24ways-git-peerreview.png" alt="agence" /></p>
+<ol>
+<li><strong>Build:</strong> code repo + dependencies + binary</li>
+<li><strong>Release:</strong> Build output + config</li>
+<li><strong>Run:</strong> The run stage (also known as “runtime”) runs the app in the execution environment, by launching some set of the app’s processes against a selected release.</li>
+</ol>
+
+<ul>
+<li>A codebase is transformed into a (non-development) deploy through three stages:
+
+<ul>
+<li>The build stage is a transform which converts a code repo into an executable bundle known as a build. Using a version of the code at a commit specified by the deployment process, the build stage fetches vendors dependencies and compiles binaries and assets.</li>
+<li>The release stage takes the build produced by the build stage and combines it with the deploy’s current config. The resulting release contains both the build and the config and is ready for immediate execution in the execution environment.</li>
+<li>The run stage (also known as “runtime”) runs the app in the execution environment, by launching some set of the app’s processes against a selected release.</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/release.png" alt="agence" /></p>
+
+<p>Every release should always have a unique release ID, such as a timestamp of the release (such as 2011-04-06-20:32:17) or an incrementing number (such as v100). Releases are an append-only ledger and a release cannot be mutated once it is created. Any change must create a new release.</p>
+
+<p>Builds are initiated by the app’s developers whenever new code is deployed. Runtime execution, by contrast, can happen automatically in cases such as a server reboot, or a crashed process being restarted by the process manager. Therefore, the run stage should be kept to as few moving parts as possible, since problems that prevent an app from running can cause it to break in the middle of the night when no developers are on hand. The build stage can be more complex, since errors are always in the foreground for a developer who is driving the deploy.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -659,8 +680,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -674,6 +693,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -739,21 +761,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -770,6 +777,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -862,68 +872,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -938,6 +890,21 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -989,15 +956,66 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
         
         
 
 
         
-            <a class="nav nav-prev" href="/code-review/git-flow/" title="Git branch naming conventions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/standart/backing-services/" title="Backing Services"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/code-review/review/" title="Review" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/standart/processes/" title="Processes" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1006,20 +1024,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1519925378"></script>
-    <script src="/js/perfect-scrollbar.min.js?1519925378"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1519925378"></script>
-    <script src="/js/jquery.sticky.js?1519925378"></script>
-    <script src="/js/featherlight.min.js?1519925378"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1519925378"></script>
-    <script src="/js/highlight.pack.js?1519925378"></script>
+    <script src="/js/clipboard.min.js?1519925379"></script>
+    <script src="/js/perfect-scrollbar.min.js?1519925379"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1519925379"></script>
+    <script src="/js/jquery.sticky.js?1519925379"></script>
+    <script src="/js/featherlight.min.js?1519925379"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1519925379"></script>
+    <script src="/js/highlight.pack.js?1519925379"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1519925378"></script>
-    <script src="/js/learn.js?1519925378"></script>
-    <script src="/js/hugo-learn.js?1519925378"></script>
+    <script src="/js/modernizr.custom.71422.js?1519925379"></script>
+    <script src="/js/learn.js?1519925379"></script>
+    <script src="/js/hugo-learn.js?1519925379"></script>
 
-    <link href="/mermaid/mermaid.css?1519925378" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1519925378"></script>
+    <link href="/mermaid/mermaid.css?1519925379" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1519925379"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -1027,3 +1045,4 @@
 
   </body>
 </html>
+

@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Development :: Continuous Delivery &amp; Development Standart Documentation</title>
+    <title>Backing Services :: Continuous Delivery &amp; Development Standart Documentation</title>
     
     
     <link href="/css/nucleus.css?1519925378" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/code-review/develop/">
+  <body class="" data-url="/standart/backing-services/">
     <nav id="sidebar" class="">
 
 
@@ -108,7 +108,7 @@
   
     
     <li data-nav-id="/standart/" title="Development Standarts" class="dd-item 
-        
+        parent
         
         
         ">
@@ -189,7 +189,7 @@
  
   
     
-      <li data-nav-id="/standart/backing-services/" title="Backing Services" class="dd-item ">
+      <li data-nav-id="/standart/backing-services/" title="Backing Services" class="dd-item active">
         <a href="/standart/backing-services/">
         <b>d. </b>Backing Services
         
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/code-review/" title="Development &amp; Review" class="dd-item 
-        parent
+        
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/code-review/develop/" title="Development" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/code-review/develop/">
@@ -591,7 +591,7 @@
             
           
           
-            <a href='/'>Home Page</a> > <a href='/code-review/'>Development & Review</a> > Development
+            <a href='/'>Home Page</a> > <a href='/standart/'>Development Standarts</a> > Backing Services
           
          
           
@@ -615,18 +615,28 @@
         
         <div id="body-inner">
           
-            <h1>Development</h1>
+            <h1>Backing Services</h1>
           
 
         
 
 
-<p><img src="/images/24ways-git-peerreview.png" alt="agence" /></p>
+<ul>
+<li>A backing service is any service the app consumes over the network as part of its normal operation. Examples include datastores (such as MySQL or CouchDB), messaging/queueing systems (such as RabbitMQ or Beanstalkd), SMTP services for outbound email (such as Postfix), and caching systems (such as Memcached).</li>
+<li>Your code will talk to many services, like a database, a cache, an email service, a queueing system, etc. These should all be referenced by a simple endpoint (URL) and maybe a username and password. They might be running on the same machine, or they might be on a different host, in a different datacenter, or managed by a cloud SaaS company. The point is, your code shouldn’t know the difference.</li>
+<li>This is another case where defining your dependencies cleanly keeps your system flexible and each part is abstracted from the complexities of the others…a core tenet of good architecture.</li>
+<li>The code for a twelve-factor app makes no distinction between local and third party services. To the app, both are attached resources, accessed via a URL or other locator/credentials stored in the config. A deploy of the twelve-factor app should be able to swap out a local MySQL database with one managed by a third party (such as Amazon RDS) without any changes to the app’s code. Likewise, a local SMTP server could be swapped with a third-party SMTP service (such as Postmark) without code changes. In both cases, only the resource handle in the config needs to change.</li>
+</ul>
+
+<p><img src="/images/attached-resources.png?1" alt="agence" /></p>
+
+<p><em>Importance: High</em></p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -659,8 +669,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -674,6 +682,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -723,21 +734,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -754,6 +750,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -862,68 +861,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -938,6 +879,21 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -989,15 +945,66 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
         
         
 
 
         
-            <a class="nav nav-prev" href="/code-review/git-flow/" title="Git branch naming conventions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/standart/config/" title="Config"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/code-review/review/" title="Review" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/standart/buid-release-run/" title="Build, release, run" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1006,20 +1013,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1519925378"></script>
-    <script src="/js/perfect-scrollbar.min.js?1519925378"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1519925378"></script>
-    <script src="/js/jquery.sticky.js?1519925378"></script>
-    <script src="/js/featherlight.min.js?1519925378"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1519925378"></script>
-    <script src="/js/highlight.pack.js?1519925378"></script>
+    <script src="/js/clipboard.min.js?1519925379"></script>
+    <script src="/js/perfect-scrollbar.min.js?1519925379"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1519925379"></script>
+    <script src="/js/jquery.sticky.js?1519925379"></script>
+    <script src="/js/featherlight.min.js?1519925379"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1519925379"></script>
+    <script src="/js/highlight.pack.js?1519925379"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1519925378"></script>
-    <script src="/js/learn.js?1519925378"></script>
-    <script src="/js/hugo-learn.js?1519925378"></script>
+    <script src="/js/modernizr.custom.71422.js?1519925379"></script>
+    <script src="/js/learn.js?1519925379"></script>
+    <script src="/js/hugo-learn.js?1519925379"></script>
 
-    <link href="/mermaid/mermaid.css?1519925378" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1519925378"></script>
+    <link href="/mermaid/mermaid.css?1519925379" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1519925379"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -1027,3 +1034,4 @@
 
   </body>
 </html>
+

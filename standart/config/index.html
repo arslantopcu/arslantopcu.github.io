@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Development :: Continuous Delivery &amp; Development Standart Documentation</title>
+    <title>Config :: Continuous Delivery &amp; Development Standart Documentation</title>
     
     
     <link href="/css/nucleus.css?1519925378" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/code-review/develop/">
+  <body class="" data-url="/standart/config/">
     <nav id="sidebar" class="">
 
 
@@ -108,7 +108,7 @@
   
     
     <li data-nav-id="/standart/" title="Development Standarts" class="dd-item 
-        
+        parent
         
         
         ">
@@ -170,7 +170,7 @@
  
   
     
-      <li data-nav-id="/standart/config/" title="Config" class="dd-item ">
+      <li data-nav-id="/standart/config/" title="Config" class="dd-item active">
         <a href="/standart/config/">
         <b>c. </b>Config
         
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/code-review/" title="Development &amp; Review" class="dd-item 
-        parent
+        
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/code-review/develop/" title="Development" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/code-review/develop/">
@@ -591,7 +591,7 @@
             
           
           
-            <a href='/'>Home Page</a> > <a href='/code-review/'>Development & Review</a> > Development
+            <a href='/'>Home Page</a> > <a href='/standart/'>Development Standarts</a> > Config
           
          
           
@@ -615,18 +615,34 @@
         
         <div id="body-inner">
           
-            <h1>Development</h1>
+            <h1>Config</h1>
           
 
         
 
 
-<p><img src="/images/24ways-git-peerreview.png" alt="agence" /></p>
+<ul>
+<li>Resource handles to the database, Memcache, Redis, etc..</li>
+<li>All system/service configuration is stored in a separate and secure environment
+
+<ul>
+<li>Configuration is seperated from codebase</li>
+<li>Configuration is managed entirely by variables that can be changed/established on build</li>
+<li>Production Config files are managed in a private repository with 2-factor auth or managed as prompts</li>
+<li>Production Config files are included in <code>.gitignore</code></li>
+</ul></li>
+<li>Configuration is anything that may vary between different environments. Code is all the stuff that doesn’t.</li>
+<li>Apps sometimes store config as constants in the code. This is a violation of twelve-factor, which requires strict separation of config from code. Config varies substantially across deploys, code does not.</li>
+<li>The twelve-factor app stores config in environment variables (often shortened to env vars or env). Env vars are easy to change between deploys without changing any code; unlike config files, there is little chance of them being checked into the code repo accidentally; and unlike custom config files, or other config mechanisms such as Java System Properties, they are a language- and OS-agnostic standard.</li>
+</ul>
+
+<p><em>Importance: Medium</em></p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -659,8 +675,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -674,6 +688,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -707,21 +724,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -738,6 +740,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -862,68 +867,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -938,6 +885,21 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
                     
                         
             
@@ -989,15 +951,66 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
         
         
 
 
         
-            <a class="nav nav-prev" href="/code-review/git-flow/" title="Git branch naming conventions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/standart/dependencies/" title="Dependencies"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/code-review/review/" title="Review" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/standart/backing-services/" title="Backing Services" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1027,3 +1040,4 @@
 
   </body>
 </html>
+

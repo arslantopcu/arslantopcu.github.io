@@ -9,20 +9,20 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Development :: Continuous Delivery &amp; Development Standart Documentation</title>
+    <title>Processes :: Continuous Delivery &amp; Development Standart Documentation</title>
     
     
-    <link href="/css/nucleus.css?1519925378" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1519925378" rel="stylesheet">
-    <link href="/css/hybrid.css?1519925378" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1519925378" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1519925378" rel="stylesheet">
-    <link href="/css/auto-complete.css?1519925378" rel="stylesheet">
-    <link href="/css/theme.css?1519925378" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1519925378" rel="stylesheet">
+    <link href="/css/nucleus.css?1519925379" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1519925379" rel="stylesheet">
+    <link href="/css/hybrid.css?1519925379" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1519925379" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1519925379" rel="stylesheet">
+    <link href="/css/auto-complete.css?1519925379" rel="stylesheet">
+    <link href="/css/theme.css?1519925379" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1519925379" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1519925378"></script>
+    <script src="/js/jquery-2.x.min.js?1519925379"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/code-review/develop/">
+  <body class="" data-url="/standart/processes/">
     <nav id="sidebar" class="">
 
 
@@ -84,14 +84,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1519925378"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1519925378"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1519925379"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1519925379"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1519925378"></script>
+<script type="text/javascript" src="/js/search.js?1519925379"></script>
 
     
   </div>
@@ -108,7 +108,7 @@
   
     
     <li data-nav-id="/standart/" title="Development Standarts" class="dd-item 
-        
+        parent
         
         
         ">
@@ -227,7 +227,7 @@
  
   
     
-      <li data-nav-id="/standart/processes/" title="Processes" class="dd-item ">
+      <li data-nav-id="/standart/processes/" title="Processes" class="dd-item active">
         <a href="/standart/processes/">
         <b>g. </b>Processes
         
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/code-review/" title="Development &amp; Review" class="dd-item 
-        parent
+        
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/code-review/develop/" title="Development" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/code-review/develop/">
@@ -591,7 +591,7 @@
             
           
           
-            <a href='/'>Home Page</a> > <a href='/code-review/'>Development & Review</a> > Development
+            <a href='/'>Home Page</a> > <a href='/standart/'>Development Standarts</a> > Processes
           
          
           
@@ -615,18 +615,27 @@
         
         <div id="body-inner">
           
-            <h1>Development</h1>
+            <h1>Processes</h1>
           
 
         
 
 
-<p><img src="/images/24ways-git-peerreview.png" alt="agence" /></p>
+<ul>
+<li>Execute the app as one or more stateless processes</li>
+<li>The app is executed in the execution environment as one or more processes.</li>
+<li>It’s likely you will have your application running on many servers, because that makes it more fault tolerant, and because you can support more traffic. As a rule, you want each of those instances of running code to be stateless. In other words, the state of your system is completely defined by your databases and shared storage, and not by each individual running application instance.</li>
+<li>Twelve-factor processes are stateless and share-nothing. Any data that needs to persist must be stored in a stateful backing service, typically a database.</li>
+<li>The memory space or filesystem of the process can be used as a brief, single-transaction cache. For example, downloading a large file, operating on it, and storing the results of the operation in the database. The twelve-factor app never assumes that anything cached in memory or on disk will be available on a future request or job – with many processes of each type running, chances are high that a future request will be served by a different process. Even when running only one process, a restart (triggered by code deploy, config change, or the execution environment relocating the process to a different physical location) will usually wipe out all local (e.g., memory and filesystem) state.</li>
+</ul>
+
+<p><em>Importance: High</em></p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -659,8 +668,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -675,69 +682,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -819,92 +765,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -935,6 +795,35 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -989,15 +878,132 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
         
         
 
 
         
-            <a class="nav nav-prev" href="/code-review/git-flow/" title="Git branch naming conventions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/standart/buid-release-run/" title="Build, release, run"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/code-review/review/" title="Review" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/standart/port-binding/" title="Port binding " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -1006,20 +1012,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1519925378"></script>
-    <script src="/js/perfect-scrollbar.min.js?1519925378"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1519925378"></script>
-    <script src="/js/jquery.sticky.js?1519925378"></script>
-    <script src="/js/featherlight.min.js?1519925378"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1519925378"></script>
-    <script src="/js/highlight.pack.js?1519925378"></script>
+    <script src="/js/clipboard.min.js?1519925379"></script>
+    <script src="/js/perfect-scrollbar.min.js?1519925379"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1519925379"></script>
+    <script src="/js/jquery.sticky.js?1519925379"></script>
+    <script src="/js/featherlight.min.js?1519925379"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1519925379"></script>
+    <script src="/js/highlight.pack.js?1519925379"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1519925378"></script>
-    <script src="/js/learn.js?1519925378"></script>
-    <script src="/js/hugo-learn.js?1519925378"></script>
+    <script src="/js/modernizr.custom.71422.js?1519925379"></script>
+    <script src="/js/learn.js?1519925379"></script>
+    <script src="/js/hugo-learn.js?1519925379"></script>
 
-    <link href="/mermaid/mermaid.css?1519925378" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1519925378"></script>
+    <link href="/mermaid/mermaid.css?1519925379" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1519925379"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -1027,3 +1033,4 @@
 
   </body>
 </html>
+
