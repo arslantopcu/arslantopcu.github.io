@@ -11,7 +11,7 @@
 	"title": "Development Standarts",
 	"tags": [],
 	"description": "",
-	"content": "  Codebase   Dependencies   Config   Backing Services   Build, release, run   Processes   Port binding    Concurrency   Disposability   Dev Prod Parity   Logs   Admin processes   "
+	"content": "  Codebase   Dependencies   Config   Backing Services   Build, release, run   Processes   Port binding    Concurrency   Disposability   Dev Prod Parity   Logs   Admin processes   App check list  Use VCS(subversion, git) Execution environment is isolated It is easy to access Backen Service Build, Stage, Run environment is sperated Use process manages to manage the application Support short startup time and graceful shutdown Dev environment is identical to prod environment Collect logs in the datastore by the another app  "
 },
 {
 	"uri": "https://arslantopcu.github.io/code-review/git-flow/",
